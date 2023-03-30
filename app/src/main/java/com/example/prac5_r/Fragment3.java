@@ -31,6 +31,20 @@ public class Fragment3 extends Fragment {
         fieldEmail = view.findViewById(R.id.editTextEmail);
         fieldPassword = view.findViewById(R.id.editTextPassword);
 
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_fragment3_to_fragment1);
+            }
+        });
+
+        view.findViewById(R.id.backbutt2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_fragment3_to_fragment1);
+            }
+        });
+
         return view;
     }
 }

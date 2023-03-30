@@ -28,6 +28,24 @@ public class Fragment1 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_1, container, false);
 
+        editEmail = view.findViewById(R.id.editTextTextEmailAddress);
+        editPass = view.findViewById(R.id.editTextTextPassword);
+        signUp = view.findViewById(R.id.button_signup);
+        login = view.findViewById(R.id.button_login);
+
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment3);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment2);
+            }
+        });
 
         return view;
     }
