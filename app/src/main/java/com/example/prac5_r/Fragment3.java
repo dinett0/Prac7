@@ -34,7 +34,11 @@ public class Fragment3 extends Fragment {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_fragment3_to_fragment1);
+                Bundle result = new Bundle();
+                result.putString("name", fieldName.getText().toString());
+                result.putString("email", fieldEmail.getText().toString());
+                result.putString("password", fieldPassword.getText().toString());
+                Navigation.findNavController(view).navigate(R.id.action_fragment3_to_fragment1, result);
             }
         });
 

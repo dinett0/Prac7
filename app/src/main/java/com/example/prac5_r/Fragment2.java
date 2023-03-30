@@ -23,6 +23,18 @@ public class Fragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_2, container, false);
+
+        name = view.findViewById(R.id.name);
+        email = view.findViewById(R.id.email);
+        password = view.findViewById(R.id.password);
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            email.setText(bundle.getString("email"));
+            password.setText(bundle.getString("password"));
+            name.setText(bundle.getString("name"));
+        }
+
         view.findViewById(R.id.backbutt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

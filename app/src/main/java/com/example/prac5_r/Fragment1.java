@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class Fragment1 extends Fragment {
     EditText editEmail;
@@ -33,6 +34,13 @@ public class Fragment1 extends Fragment {
         signUp = view.findViewById(R.id.button_signup);
         login = view.findViewById(R.id.button_login);
 
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            editEmail.setText(bundle.getString("email"));
+            editPass.setText(bundle.getString("password"));
+            name = bundle.getString("name");
+        }
+
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +51,11 @@ public class Fragment1 extends Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment2);
+                Bundle result = new Bundle();
+                result.putString("name", name);
+                result.putString("email", editEmail.getText().toString());
+                result.putString("password", editPass.getText().toString());
+                Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment2, result);
             }
         });
 
