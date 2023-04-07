@@ -1,4 +1,4 @@
-package com.example.prac5_r.UI;
+package com.example.prac5_r.UI.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 

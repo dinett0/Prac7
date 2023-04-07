@@ -1,4 +1,4 @@
-package com.example.prac5_r.UI;
+package com.example.prac5_r.UI.View;
 
 import android.os.Bundle;
 
@@ -41,6 +41,13 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.action_fragment2_to_fragment1);
+            }
+        });
+
+        view.findViewById(R.id.buttonLists).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_fragment2_to_fragment_Branching);
             }
         });
         return view;

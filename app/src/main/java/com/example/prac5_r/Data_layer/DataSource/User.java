@@ -1,11 +1,11 @@
-package com.example.prac5_r.Data_layer;
+package com.example.prac5_r.Data_layer.DataSource;
 
 public class User {
     private String name;
     private String email;
     private String password;
 
-    public User(String name, int age, String email, String password) {
+    public User(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
