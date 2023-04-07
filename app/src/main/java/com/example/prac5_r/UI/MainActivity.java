@@ -1,8 +1,10 @@
-package com.example.prac5_r;
+package com.example.prac5_r.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.prac5_r.R;
 
 public class MainActivity extends AppCompatActivity {
 

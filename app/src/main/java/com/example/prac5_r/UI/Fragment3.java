@@ -1,4 +1,4 @@
-package com.example.prac5_r;
+package com.example.prac5_r.UI;
 
 import android.os.Bundle;
 
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.prac5_r.R;
 
 public class Fragment3 extends Fragment {
 
